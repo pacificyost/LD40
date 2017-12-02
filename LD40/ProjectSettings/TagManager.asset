@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Environment
   - Collectible
+  - Stash
+  - Enemy
+  - Ally
   layers:
   - Default
   - TransparentFX
