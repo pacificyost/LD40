@@ -37,11 +37,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4491643015835094}
-  - component: {fileID: 95816088152113564}
   - component: {fileID: 195725428521957802}
   - component: {fileID: 114288404217728742}
   - component: {fileID: 114738056511222892}
   - component: {fileID: 114788350758893606}
+  - component: {fileID: 114015972494482344}
+  - component: {fileID: 95722411797762560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -117,7 +118,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272949792765156}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &95816088152113564
+--- !u!95 &95722411797762560
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -134,6 +135,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114015972494482344
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994425785366914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a32db9a757921f4595494d5f6711ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 0}
+  interactDistance: 2
 --- !u!114 &114288404217728742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b7c8dc22d4b1e4a981cbec458258eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collected: 0
+  collected: 100
 --- !u!114 &114738056511222892
 MonoBehaviour:
   m_ObjectHideFlags: 1

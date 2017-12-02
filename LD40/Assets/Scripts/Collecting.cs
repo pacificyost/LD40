@@ -5,7 +5,8 @@ using UnityEngine;
 public class Collecting : MonoBehaviour {
 
     public GameObject goal;
-    public float collectDistance = 2.0f;
+    private Inventory goalInventory;
+    public float collectDistance = 3.0f;
     private Inventory inventory;
     
 
@@ -22,7 +23,7 @@ public class Collecting : MonoBehaviour {
             PlayerStateControl.StartCollecting();
         }
 
-        if (WithinRange() == false)
+        if (WithinRange() == false && PlayerStateControl.CurrentState() == PlayerStateControl.PlayerStates.Collecting)
         {
             PlayerStateControl.StopCollecting();
         }
@@ -35,6 +36,7 @@ public class Collecting : MonoBehaviour {
         if (WithinRange() && PlayerStateControl.CurrentState() == PlayerStateControl.PlayerStates.Collecting)
         {
             inventory.collected++;
+            goalInventory.collected--;
         }
     }
 
@@ -51,5 +53,11 @@ public class Collecting : MonoBehaviour {
             }
         }
         return false;
+    }
+
+    public void SetGoal(GameObject goalObject)
+    {
+        goal = goalObject;
+        goalInventory = goal.GetComponent<Inventory>();
     }
 }

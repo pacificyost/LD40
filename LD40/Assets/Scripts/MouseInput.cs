@@ -31,11 +31,18 @@ public class MouseInput : MonoBehaviour {
                 player.GetComponent<NavMeshAgent>().SetDestination(hit.point);
                 if (hit.collider.gameObject.tag == "Collectible")
                 {
-                    player.GetComponent<Collecting>().goal = hit.collider.gameObject;
+                    player.GetComponent<Collecting>().SetGoal(hit.collider.gameObject);
+                }
+
+                if (hit.collider.gameObject.tag == "Stash")
+                {
+                    player.GetComponent<Depositing>().SetGoal(hit.collider.gameObject);
                 }
             }
 
            
         }
+
+        //Debug.Log(PlayerStateControl.CurrentState().ToString());
 	}
 }
