@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 
-    public int collected = 0;
+    public int quantity = 0;
 
 
     private void Update()
     {
-        if (collected <= 0)
+        if (quantity <= 0)
         {
             switch (tag)
             {
                 case "Collectible":
+                case "Enemy":
                     Destroy(this.transform.gameObject);
                     break;
                 default:
@@ -21,6 +22,15 @@ public class Inventory : MonoBehaviour {
             }
         }
            
+    }
+
+    public void TransferTo(Inventory destination)
+    {
+        if (this.quantity > 0)
+        {
+            this.quantity--;
+            destination.quantity++;
+        }
     }
 
 }

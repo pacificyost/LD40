@@ -33,15 +33,6 @@ public static class PlayerStateControl {
         currentState = PlayerStates.Moving;
     }
 
-    public static void StopMoving()
-    {
-        GetAnimator();
-        animator.SetBool("Moving", false);
-        animator.SetBool("Collecting", false);
-        animator.SetBool("Depositing", false);
-        currentState = PlayerStates.Idle;
-    }
-
     public static void StartCollecting()
     {
         GetAnimator();
@@ -49,15 +40,6 @@ public static class PlayerStateControl {
         animator.SetBool("Collecting", true);
         animator.SetBool("Depositing", false);
         currentState = PlayerStates.Collecting;
-    }
-
-    public static void StopCollecting()
-    {
-        GetAnimator();
-        animator.SetBool("Moving", false);
-        animator.SetBool("Collecting", false);
-        animator.SetBool("Depositing", false);
-        currentState = PlayerStates.Idle;
     }
 
     public static void StartDepositing()
@@ -69,7 +51,7 @@ public static class PlayerStateControl {
         currentState = PlayerStates.Depositing;
     }
 
-    public static void StopDepositing()
+    public static void GoIdle()
     {
         GetAnimator();
         animator.SetBool("Moving", false);
@@ -77,10 +59,5 @@ public static class PlayerStateControl {
         animator.SetBool("Depositing", false);
         currentState = PlayerStates.Idle;
     }
-
-
-
-
-
-
+    
 }

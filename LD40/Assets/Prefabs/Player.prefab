@@ -40,9 +40,8 @@ GameObject:
   - component: {fileID: 195725428521957802}
   - component: {fileID: 114288404217728742}
   - component: {fileID: 114738056511222892}
-  - component: {fileID: 114788350758893606}
-  - component: {fileID: 114015972494482344}
   - component: {fileID: 95722411797762560}
+  - component: {fileID: 114858698318820548}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -135,19 +134,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114015972494482344
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1994425785366914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a32db9a757921f4595494d5f6711ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goal: {fileID: 0}
-  interactDistance: 2
 --- !u!114 &114288404217728742
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b7c8dc22d4b1e4a981cbec458258eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collected: 100
+  quantity: 0
 --- !u!114 &114738056511222892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -171,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f9facf93be6a824a9cae4d591f9cef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114788350758893606
+--- !u!114 &114858698318820548
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -179,11 +165,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1994425785366914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc306b525dea6f949bb5e965e5c1b28a, type: 3}
+  m_Script: {fileID: 11500000, guid: b26550d0a4fe93242b38a7124692f282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 0}
-  collectDistance: 3
+  interactDistance: 3
 --- !u!136 &136728636078765478
 CapsuleCollider:
   m_ObjectHideFlags: 1

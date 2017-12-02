@@ -15,7 +15,7 @@ public class ResourceUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        resourcesText.text = inventory.collected.ToString();
+        resourcesText.text = inventory.quantity.ToString();
         
 	}
 }

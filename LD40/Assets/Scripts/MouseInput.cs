@@ -31,12 +31,12 @@ public class MouseInput : MonoBehaviour {
                 player.GetComponent<NavMeshAgent>().SetDestination(hit.point);
                 if (hit.collider.gameObject.tag == "Collectible")
                 {
-                    player.GetComponent<Collecting>().SetGoal(hit.collider.gameObject);
+                    player.GetComponent<Interact>().SetGoal(hit.collider.gameObject, true);
                 }
 
                 if (hit.collider.gameObject.tag == "Stash")
                 {
-                    player.GetComponent<Depositing>().SetGoal(hit.collider.gameObject);
+                    player.GetComponent<Interact>().SetGoal(hit.collider.gameObject, false);
                 }
             }
 
