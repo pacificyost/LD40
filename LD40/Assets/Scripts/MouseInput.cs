@@ -5,13 +5,14 @@ using UnityEngine.AI;
 
 public class MouseInput : MonoBehaviour {
 
-    Camera mainCamera;
-    int mouseDistance = 1000;
-    public GameObject player;
+    private Camera mainCamera;
+    private int mouseDistance = 1000;
+    private GameObject player;
 
 	// Use this for initialization
 	void Start () {
         mainCamera = Camera.main;
+        player = GameObject.FindGameObjectWithTag("Player");
 	}
 	
 	// Update is called once per frame
@@ -30,7 +31,7 @@ public class MouseInput : MonoBehaviour {
                 player.GetComponent<NavMeshAgent>().SetDestination(hit.point);
                 if (hit.collider.gameObject.tag == "Collectible")
                 {
-                    player.GetComponent<Collect>().goal = hit.collider.gameObject;
+                    player.GetComponent<Collecting>().goal = hit.collider.gameObject;
                 }
             }
 
