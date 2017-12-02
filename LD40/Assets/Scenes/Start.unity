@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 627375569}
   - component: {fileID: 627375570}
   - component: {fileID: 627375571}
+  - component: {fileID: 627375572}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -411,8 +412,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
-  collectDistance: 1
+  collectDistance: 2
   collected: 0
+  collectDelay: 1
+  collecting: 0
+--- !u!95 &627375572
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 627375564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 11c3b06cec0ed134b9568f93973220e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1299594142
 GameObject:
   m_ObjectHideFlags: 0
