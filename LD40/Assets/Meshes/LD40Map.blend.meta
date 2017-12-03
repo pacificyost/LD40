@@ -16,13 +16,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Ceiling__texture1_png
+    second: {fileID: 2100000, guid: 952f3aa3ce75c284c874758e9d2b973e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor__texture1_png
+    second: {fileID: 2100000, guid: 2b0b6ffe163b2ba46a3bb97782ca4a43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: None__texture1_png
     second: {fileID: 2100000, guid: 952f3aa3ce75c284c874758e9d2b973e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall__texture1_png
+    second: {fileID: 2100000, guid: aca764110b4e48a478d9f95a6278da93, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
