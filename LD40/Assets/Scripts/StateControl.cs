@@ -6,7 +6,7 @@ using LD40.Utility;
 public class StateControl : MonoBehaviour {
     Animator animator;
 
-    private static States currentState = States.Idle;
+    private States currentState = States.Idle;
 
     private void Start()
     {

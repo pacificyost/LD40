@@ -24,12 +24,20 @@ public class Inventory : MonoBehaviour {
            
     }
 
-    public void TransferTo(Inventory destination)
+    public void TransferTo(Inventory destination, int amount)
     {
         if (this.quantity > 0)
         {
-            this.quantity--;
-            destination.quantity++;
+            if (amount > this.quantity)
+            {
+                destination.quantity += this.quantity;
+                this.quantity = 0;
+            }
+            else
+            {
+                this.quantity -= amount;
+                destination.quantity += amount;
+            }
         }
     }
 

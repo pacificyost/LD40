@@ -1,39 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LD40.Utility;
 
 public class Interact : MonoBehaviour {
 
     private Inventory goalInventory;
+    private StateControl stateControl;
     public float interactDistance = 3.0f;
     private Inventory inventory;
     private bool goalIsSource = false;
+    private int transferAmount = 1;
 
     // Use this for initialization
     void Start()
     {
         inventory = GetComponent<Inventory>();
+        stateControl = GetComponent<StateControl>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (WithinRange() && PlayerStateControl.CurrentState() == PlayerStateControl.PlayerStates.Idle)
+        if (WithinRange() && stateControl.CurrentState() == States.Idle)
         {
             if (goalIsSource)
             {
-                PlayerStateControl.StartCollecting();
+                stateControl.StartCollecting();
             }
             else
             {
-                PlayerStateControl.StartDepositing();
+                stateControl.StartDepositing();
             }
         }
 
-        if (PlayerStateControl.CurrentState() != PlayerStateControl.PlayerStates.Idle && WithinRange() == false )
+        if (stateControl.CurrentState() != States.Idle && WithinRange() == false )
         {
-            PlayerStateControl.GoIdle();
+            stateControl.GoIdle();
+            transferAmount = 1;
         }
 
     }
@@ -44,12 +49,13 @@ public class Interact : MonoBehaviour {
         {
             if (goalIsSource)
             {
-                goalInventory.TransferTo(inventory);
+                goalInventory.TransferTo(inventory, transferAmount);
             }
             else
             {
-                inventory.TransferTo(goalInventory);
+                inventory.TransferTo(goalInventory, transferAmount);
             }
+            transferAmount += 1;
         }
     }
 
@@ -72,6 +78,7 @@ public class Interact : MonoBehaviour {
             }
 
         }
+        
         return false;
     }
 
