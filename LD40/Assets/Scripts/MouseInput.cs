@@ -7,12 +7,14 @@ public class MouseInput : MonoBehaviour {
 
     private Camera mainCamera;
     private int mouseDistance = 1000;
-    private GameObject player;
+    private Interact interact;
+    private NavMeshAgent navMeshAgent;
 
 	// Use this for initialization
 	void Start () {
         mainCamera = Camera.main;
-        player = GameObject.FindGameObjectWithTag("Player");
+        interact = GetComponent<Interact>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
 	}
 	
 	// Update is called once per frame
@@ -24,21 +26,17 @@ public class MouseInput : MonoBehaviour {
             Ray mouseRay = mainCamera.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(mouseRay, out hit, mouseDistance);
 
-            
-
-            if (player != null)
+            navMeshAgent.SetDestination(hit.point);
+            if (hit.collider.gameObject.tag == "Collectible")
             {
-                player.GetComponent<NavMeshAgent>().SetDestination(hit.point);
-                if (hit.collider.gameObject.tag == "Collectible")
-                {
-                    player.GetComponent<Interact>().SetGoal(hit.collider.gameObject, true);
-                }
-
-                if (hit.collider.gameObject.tag == "Stash")
-                {
-                    player.GetComponent<Interact>().SetGoal(hit.collider.gameObject, false);
-                }
+                interact.SetGoal(hit.collider.gameObject, true);
             }
+
+            if (hit.collider.gameObject.tag == "Stash")
+            {
+                interact.SetGoal(hit.collider.gameObject, false);
+            }
+            
 
            
         }
