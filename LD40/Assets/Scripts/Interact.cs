@@ -40,7 +40,6 @@ public class Interact : MonoBehaviour {
 
     public void Transfer()
     {
-        Debug.Log(goalInventory);
         if (WithinRange())
         {
             if (goalIsSource)

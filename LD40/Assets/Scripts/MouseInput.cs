@@ -41,6 +41,5 @@ public class MouseInput : MonoBehaviour {
            
         }
 
-        //Debug.Log(PlayerStateControl.CurrentState().ToString());
 	}
 }
