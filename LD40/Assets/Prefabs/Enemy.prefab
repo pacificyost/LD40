@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114938740056889820}
   - component: {fileID: 114804109427713780}
   - component: {fileID: 114820271495895506}
+  - component: {fileID: 136498232174311084}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -57,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1703679394149022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.88, y: 0, z: 0}
+  m_LocalPosition: {x: -3.01, y: 0.5, z: 3.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4668722377148682}
@@ -181,6 +182,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactDistance: 3
+--- !u!136 &136498232174311084
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1703679394149022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136678248530945510
 CapsuleCollider:
   m_ObjectHideFlags: 1
