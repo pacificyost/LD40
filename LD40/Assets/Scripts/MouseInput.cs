@@ -19,27 +19,21 @@ public class MouseInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        RaycastHit hit;
-		if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            Ray mouseRay = mainCamera.ScreenPointToRay(Input.mousePosition);
-            Physics.Raycast(mouseRay, out hit, mouseDistance);
-
+            RaycastHit hit = GetMouseClick();
             navMeshAgent.SetDestination(hit.point);
-            if (hit.collider.gameObject.tag == "Collectible")
-            {
-                interact.SetGoal(hit.collider.gameObject, true);
-            }
-
-            if (hit.collider.gameObject.tag == "Stash")
-            {
-                interact.SetGoal(hit.collider.gameObject, false);
-            }
             
-
-           
         }
+    }
 
-	}
+    private RaycastHit GetMouseClick()
+    {
+        RaycastHit hit = new RaycastHit();
+
+        Ray mouseRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Physics.Raycast(mouseRay, out hit, mouseDistance);
+
+        return hit;
+    }
 }
