@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 95680191789549326}
   - component: {fileID: 114091462778159282}
   - component: {fileID: 65374935991303500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 33187451768699738}
   - component: {fileID: 23707997050253518}
   - component: {fileID: 95117144492181044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LD40Creature
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4492510713169370}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eggs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 33696022579083114}
   - component: {fileID: 23575421142332026}
   - component: {fileID: 95900412415381026}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Egg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 33981703725742008}
   - component: {fileID: 23972998540070704}
   - component: {fileID: 95875300315995840}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Egg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,8 @@ GameObject:
   - component: {fileID: 208664578854412112}
   - component: {fileID: 114956882250012424}
   - component: {fileID: 136980488753622582}
-  m_Layer: 0
+  - component: {fileID: 114336273628353988}
+  m_Layer: 9
   m_Name: Nest
   m_TagString: Collectible
   m_Icon: {fileID: 0}
@@ -91,7 +92,7 @@ GameObject:
   - component: {fileID: 33541236171661324}
   - component: {fileID: 23945867387998586}
   - component: {fileID: 95298647598727030}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LD40Nest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +110,7 @@ GameObject:
   - component: {fileID: 33744328845890718}
   - component: {fileID: 23576077389743962}
   - component: {fileID: 95642643555663834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Egg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +128,7 @@ GameObject:
   - component: {fileID: 33787692018254232}
   - component: {fileID: 23988871041090328}
   - component: {fileID: 95133455569508444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Egg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +146,7 @@ GameObject:
   - component: {fileID: 33334096443732694}
   - component: {fileID: 23019368294703618}
   - component: {fileID: 95886092856777704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Egg (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1373456337209606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 13}
+  m_LocalPosition: {x: 14.04, y: 0, z: 4.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4103383276356200}
@@ -612,6 +613,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114336273628353988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1373456337209606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe36037de1d688940b90422c13f1a952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnDelay: 10
+  spawnPrefab: {fileID: 1480038236177106, guid: b8d7532e7b79d414c9d637b8c95e0b4e,
+    type: 2}
+  rechargeDelay: 20
+  rechargeAmount: 1
 --- !u!114 &114956882250012424
 MonoBehaviour:
   m_ObjectHideFlags: 1
