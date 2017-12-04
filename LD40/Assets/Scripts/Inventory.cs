@@ -14,7 +14,10 @@ public class Inventory : MonoBehaviour {
 
     private void Start()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        if (tag == "Player")
+        {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
     }
 
     private void Update()

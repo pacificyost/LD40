@@ -27,12 +27,14 @@ public class NestAI : MonoBehaviour {
         if (nestOwner == null && spawnPrefab != null && inventory.quantity > 0)
         {
             nestOwner = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
-            inventory.quantity--;
+            nestOwner.GetComponent<Inventory>().quantity = rechargeAmount;
+            inventory.quantity -= rechargeAmount;
         }
     }
 
     private void Recharge()
     {
         inventory.quantity += rechargeAmount;
+        rechargeAmount++;
     }
 }
