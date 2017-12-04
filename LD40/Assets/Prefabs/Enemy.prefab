@@ -176,7 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26550d0a4fe93242b38a7124692f282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactDistance: 3
+  interactDistance: 6
+  increasingCollection: 0
 --- !u!114 &114268189652978448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,8 +224,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1480038236177106}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.25
-  m_Speed: 3.5
+  m_Radius: 2
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
