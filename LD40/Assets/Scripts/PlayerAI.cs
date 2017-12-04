@@ -15,6 +15,7 @@ public class PlayerAI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         GameObject nearestObject = NearestObject();
+        
 	}
 
     private GameObject NearestObject()
@@ -25,9 +26,11 @@ public class PlayerAI : MonoBehaviour {
             switch (nearby.gameObject.tag)
             {
                 case "Collectible":
-                case "Enemy":
                     interact.SetGoal(nearby.gameObject, true);
                     break;
+                case "Enemy":
+                    interact.SetGoal(nearby.gameObject, true);
+                    return nearby.gameObject;
                 case "Stash":
                     interact.SetGoal(nearby.gameObject, false);
                     break;

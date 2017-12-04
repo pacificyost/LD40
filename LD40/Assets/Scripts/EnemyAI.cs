@@ -9,15 +9,22 @@ public class EnemyAI : MonoBehaviour {
     NavMeshAgent navMeshAgent;
     // Use this for initialization
     void Start () {
-        stashInventory = GameObject.FindGameObjectWithTag("Stash").GetComponent<Inventory>();
         home = transform.position;
+        
+        
         navMeshAgent = GetComponent<NavMeshAgent>();
-        GetComponent<Interact>().SetGoal(stashInventory.transform.gameObject,true);
+        GameObject stash = GameObject.FindGameObjectWithTag("Stash");
+        
+        if (stash != null)
+        {
+            stashInventory = stash.GetComponent<Inventory>();
+            GetComponent<Interact>().SetGoal(stashInventory.transform.gameObject, true);
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (stashInventory.quantity > 0)
+		if (stashInventory != null && stashInventory.quantity > 0)
         {
             navMeshAgent.SetDestination(stashInventory.transform.position);
         }

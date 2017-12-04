@@ -26,7 +26,6 @@ public class NestAI : MonoBehaviour {
         if (spawnPrefab != null && inventory.quantity > 0)
         {
             GameObject newlySpawned = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
-            Debug.Log(newlySpawned.transform.position);
             inventory.quantity--;
         }
     }
