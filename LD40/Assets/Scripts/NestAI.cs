@@ -7,6 +7,7 @@ public class NestAI : MonoBehaviour {
     public GameObject spawnPrefab;
     public float rechargeDelay = 20.0f;
     public int rechargeAmount = 1;
+    private GameObject nestOwner;
 
     Inventory inventory;
 	// Use this for initialization
@@ -23,9 +24,9 @@ public class NestAI : MonoBehaviour {
 
     private void Spawn()
     {
-        if (spawnPrefab != null && inventory.quantity > 0)
+        if (nestOwner == null && spawnPrefab != null && inventory.quantity > 0)
         {
-            GameObject newlySpawned = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
+            nestOwner = Instantiate(spawnPrefab, transform.position, Quaternion.identity);
             inventory.quantity--;
         }
     }

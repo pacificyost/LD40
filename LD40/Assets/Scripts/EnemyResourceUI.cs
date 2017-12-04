@@ -11,22 +11,19 @@ public class EnemyResourceUI : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        enemyInventory = new List<Inventory>();
-        foreach (GameObject enemy in enemies)
-        {
-            enemyInventory.Add(enemy.GetComponent<Inventory>());
-        }
+        
         resourcesText = GetComponent<Text>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         int count = 0;
-		foreach (Inventory inventory in enemyInventory)
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
         {
-            count += inventory.quantity;
+            count += enemy.GetComponent<Inventory>().quantity;
         }
+        
         resourcesText.text = string.Concat(label + ": " + count.ToString());
 
     }
