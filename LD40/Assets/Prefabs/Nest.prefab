@@ -624,11 +624,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe36037de1d688940b90422c13f1a952, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDelay: 10
+  spawnDelay: 1
   spawnPrefab: {fileID: 1480038236177106, guid: b8d7532e7b79d414c9d637b8c95e0b4e,
     type: 2}
-  rechargeDelay: 20
-  rechargeAmount: 1
+  rechargeDelay: 1
+  rechargeAmount: 5
 --- !u!114 &114956882250012424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -641,6 +641,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantity: 50
+  maxSpeed: 10
+  encumbranceMultiplier: 1
+  minSpeed: 0.5
 --- !u!136 &136980488753622582
 CapsuleCollider:
   m_ObjectHideFlags: 1
