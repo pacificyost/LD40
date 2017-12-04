@@ -11,6 +11,7 @@ public class Interact : MonoBehaviour {
     private Inventory inventory;
     private bool goalIsSource = false;
     private int transferAmount = 1;
+    public bool increasingCollection = false;
 
     // Use this for initialization
     void Start()
@@ -55,7 +56,10 @@ public class Interact : MonoBehaviour {
             {
                 inventory.TransferTo(goalInventory, transferAmount);
             }
-            transferAmount += 1;
+            if (increasingCollection)
+            {
+                transferAmount += 5;
+            }
         }
     }
 
